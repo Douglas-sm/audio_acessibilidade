@@ -10,9 +10,7 @@ Recursos:
 - Opção de salvar no disco;
 - Opção de enviar para o servidor;
 
--- [ ENG ] --
-
-# Audio recorder
+# Audio recorder [ ENG ]
 
 Simple audio recorder using the library [Recorder.js](https://github.com/mattdiamond/Recorderjs).
 
