@@ -53,7 +53,7 @@ function startRecording() {
 		audioContext = new AudioContext();
 
 		//update the format 
-		document.getElementById("formats").innerHTML="Formato: 1 channel pcm @ "+audioContext.sampleRate/1000+"kHz - gravação em andamento <div class='rec-pulse'></div>"
+		document.getElementById("formats").innerHTML="Formato: 1 channel pcm @ "+audioContext.sampleRate/1000+"kHz - gravaÃ§Ã£o em andamento <div class='rec-pulse'></div>"
 
 		/*  assign to gumStream for later use  */
 		gumStream = stream;
@@ -86,12 +86,12 @@ function pauseRecording(){
 		//pause
 		rec.stop();
 		pauseButton.innerHTML="<i class='fa fa-play aria-hidden='true'></i><div class='text-ml'>Retomar</div>";
-		document.getElementById("formats").innerHTML="Formato: 1 channel pcm @ "+audioContext.sampleRate/1000+"kHz - gravação pausada!"
+		document.getElementById("formats").innerHTML="Formato: 1 channel pcm @ "+audioContext.sampleRate/1000+"kHz - gravaÃ§Ã£o pausada!"
 	}else{
 		//resume
 		rec.record()
-		pauseButton.innerHTML="<i class='fa fa-pause1 aria-hidden='true'></i><div class='text-ml'>Pausar</div>";
-		document.getElementById("formats").innerHTML="Formato: 1 channel pcm @ "+audioContext.sampleRate/1000+"kHz - gravação em andamento <div class='rec-pulse'></div>"
+		pauseButton.innerHTML="<i class='fa fa-pause' aria-hidden='true'></i><div class='text-ml'>Pausar</div>";
+		document.getElementById("formats").innerHTML="Formato: 1 channel pcm @ "+audioContext.sampleRate/1000+"kHz - gravaÃ§Ã£o em andamento <div class='rec-pulse'></div>"
 	}
 }
 
@@ -104,7 +104,7 @@ function stopRecording() {
 	pauseButton.disabled = true;
 
 	//reset button just in case the recording is stopped while paused
-	pauseButton.innerHTML="<i class='fa fa-pause1 aria-hidden='true'></i><div class='text-ml'>Pausar</div>";
+	pauseButton.innerHTML="<i class='fa fa-pause' aria-hidden='true'></i><div class='text-ml'>Pausar</div>";
 	
 	//tell the recorder to stop the recording
 	rec.stop();
@@ -115,7 +115,7 @@ function stopRecording() {
 	//create the wav blob and pass it on to createDownloadLink
 	rec.exportWAV(createDownloadLink);
 
-	document.getElementById("formats").innerHTML="Formato: 1 channel pcm @ "+audioContext.sampleRate/1000+"kHz - gravação finalizada"
+	document.getElementById("formats").innerHTML="Formato: 1 channel pcm @ "+audioContext.sampleRate/1000+"kHz - gravaÃ§Ã£o finalizada"
 }
 
 function createDownloadLink(blob) {
